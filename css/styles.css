@@ -1,0 +1,49 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+*{
+    margin : 0;
+    padding : 0;
+    
+}
+a,a:hover,a:click,a:active{
+    text-decoration:none;
+}
+
+header{
+    padding :10px;
+    padding-left : 10%;
+    background-color : 1B1B1E;
+    color: FBFFFE;
+    text-shadow: 2px 2px #6D676E;
+}
+.body{
+    background-color: FBFFFE; 
+    width : 50%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.btn{
+    display: block;
+    margin: 10px;
+    padding:10px;
+    background-color:white;
+    border:solid;
+    text-align:center;
+}
+.container-login{
+    padding:50px;
+    margin-top:10%;
+    background-color: 6D676E;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+input[type="text"]{
+    width:300px;
+    height:50px;
+}
+
+/* https://coolors.co/faa916-fbfffe-6d676e-1b1b1e-96031a */
