@@ -1,3 +1,26 @@
+<?php
+require "./controller/account.php";
+$result = "";
+session_start();
+
+if(isset($_POST["mail"])&&isset($_POST["mdp"])){
+  $result = login($_post["mail"],$_post["mdp"]);
+  echo $result;
+  if($result == TRUE){
+    $_SESSION["mail"] = $_POST["mail"];
+    $_SESSION["mdp"] = $_POST["mdp"];
+  }
+}
+if(isset( $_SESSION["mail"])&&isset( $_SESSION["mdp"])){
+  header("Location: view/pages/home.php");
+}
+
+
+
+
+?>
+
+
 <html lang="fr">
 
 <head>
@@ -34,9 +57,12 @@
   </header>
   <div class="body">
     <div class="container-login">
-      <div class="ligne"><label>Email</label> <input id="mail" type="text" /></div>
-      <div class="ligne"><label>mot de passe</label> <input id="mdp" type="text" /><button onclick="send()">Envoie mot de passe</button></div>
+    <form method="POST" action="index.php">
+      <div class="ligne"><label>Email</label> <input id="mail" name="mail" type="text" /></div>
+      <div class="ligne"><label>mot de passe</label> <input  id="mdp" name="mdp"  type="password" /><button type="button" onclick="send()">Envoie mot de passe</button></div>
       <div class="erreur"></div>
+      <input type="submit" value="Se connecter"/>
+      </form>
     </div>
 
 

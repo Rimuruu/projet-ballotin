@@ -6,8 +6,8 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 //Load Composer's autoloader
-require '../vendor/autoload.php';
-include '../model/authentificateGmail.php';
+require dirname(__FILE__).'/../vendor/autoload.php';
+include dirname(__FILE__).'/../model/authentificateGmail.php';
 
 
 

@@ -1,5 +1,5 @@
 <?php
-include "./mailer.php";
+include (dirname(__FILE__)."/mailer.php");
 
 
 
@@ -85,6 +85,17 @@ function accountExist($mail){
 	//console_log($item);
 	return $item;
 
+}
+
+function login($mail,$mdp){
+    if(($account = accountExist($mail))==FALSE){
+        return "Le compte n'existe pas";
+    }else if($account["password"]==$mdp){
+        return "Mauvais mot de passe";
+    }
+    else{
+        return TRUE;
+    }
 }
 
 
