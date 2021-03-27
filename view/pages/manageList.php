@@ -1,8 +1,11 @@
 <?php
+include '../../controller/vote.php';
 session_start();
 if(!(isset( $_SESSION["mail"])&&isset( $_SESSION["mdp"]))){
   header("Location: ../../index.php");
 }
+$vote = getVote($_SESSION["mail"]);
+
 
 ?>
 
@@ -39,10 +42,7 @@ if(!(isset( $_SESSION["mail"])&&isset( $_SESSION["mdp"]))){
 <body>
   <div class="body">
     <div class="container-login">
-    <div><?php echo "Connecté : ".$_SESSION["mail"]?> </div>
-    <a href="./voteList.php">Voter</a>
-    <a href="./create.php">Créer un vote</a>
-    <a href="./manageList.php">Gérer un vote</a>
+        <?php echo json_encode($vote);?>
     </div>
 
 

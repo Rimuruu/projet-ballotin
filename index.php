@@ -52,9 +52,6 @@ if(isset( $_SESSION["mail"])&&isset( $_SESSION["mdp"])){
 </head>
 
 <body>
-  <header>
-    <h1>Projet Ballotin</h1>
-  </header>
   <div class="body">
     <div class="container-login">
     <form method="POST" action="index.php">
@@ -84,7 +81,7 @@ if(isset( $_SESSION["mail"])&&isset( $_SESSION["mdp"])){
     } else {
       $.ajax({
         method: "POST",
-        url: "controller/sendPassword.php",
+        url: "controller/traitement.php",
         dataType: "json",
         data: {
           "mail": mail
