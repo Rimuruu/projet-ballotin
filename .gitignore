@@ -1,3 +1,4 @@
 
 composer.phar
 /vendor/
+/model/authentificateGmail.php
