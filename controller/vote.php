@@ -14,7 +14,8 @@ function createVote($mail,$question,$responses,$votants){
             "question"=>$question,
             "reponses" => $responses,
             "votants"=> $votants,
-            "status" => "going",  
+            "status" => "going",
+            "date" => getdate(), 
         ];
         $info["cpt"] = $info["cpt"] +1; 
         array_push($info["data"],$vote);

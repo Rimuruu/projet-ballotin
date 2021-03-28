@@ -39,7 +39,8 @@ if(!(isset( $_SESSION["mail"])&&isset( $_SESSION["mdp"]))){
 <body>
   <div class="body">
     <div class="container-login">
-    <div><?php echo "Connecté : ".$_SESSION["mail"]?> </div>
+
+    <div><?php echo "Connecté : ".$_SESSION["mail"]?> <a href="./disconnect.php">Se deconnecter</a></div>
     <a href="./voteList.php">Voter</a>
     <a href="./create.php">Créer un vote</a>
     <a href="./manageList.php">Gérer un vote</a>

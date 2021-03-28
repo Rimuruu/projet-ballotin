@@ -61,7 +61,7 @@ if (!(isset($_SESSION["mail"]) && isset($_SESSION["mdp"]))) {
 <body>
   <div class="body">
     <div class="container-forms">
-      <div><?php echo "Connecté : " . $_SESSION["mail"] ?> <a href="./home.php">Home</a></div>
+      <div><?php echo "Connecté : " . $_SESSION["mail"] ?> <a href="./home.php">Home</a><a href="./disconnect.php">Se deconnecter</a></div>
       <div class="ligne"><label>Question</label> <input id="question" type="text" /></div>
       <div class="responses">
         <div class="response"><label> Response 1</label> <input id="reponse1" type="text" /></div>

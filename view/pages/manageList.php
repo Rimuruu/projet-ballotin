@@ -4,7 +4,7 @@ session_start();
 if(!(isset( $_SESSION["mail"])&&isset( $_SESSION["mdp"]))){
   header("Location: ../../index.php");
 }
-$vote = getVote($_SESSION["mail"]);
+$votes = getVote($_SESSION["mail"]);
 
 
 ?>
@@ -42,7 +42,17 @@ $vote = getVote($_SESSION["mail"]);
 <body>
   <div class="body">
     <div class="container-login">
-        <?php echo json_encode($vote);?>
+    <div><?php echo "Connecté : " . $_SESSION["mail"] ?> <a href="./home.php">Home</a><a href="./disconnect.php">Se deconnecter</a></div>
+        <?php ;
+        
+        foreach($votes as $vote ){
+          echo $vote["question"]."   ".$vote["date"]["mday"]."/".$vote["date"]["mon"]."<br/>";
+
+        }
+        
+        
+        
+        ?>
     </div>
 
 
