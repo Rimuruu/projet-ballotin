@@ -1,1 +1,10 @@
-[{"mail":"antoine.renciot@universite-paris-saclay.fr","password":"x$P$u2#kA"},{"mail":"antoine.renciot@gmail.com","password":"?N5v!v4yM"}]
+[
+    {
+        "mail": "antoine.renciot@universite-paris-saclay.fr",
+        "password": "x$P$u2#kA"
+    },
+    {
+        "mail": "antoine.renciot@gmail.com",
+        "password": "?N5v!v4yM"
+    }
+]

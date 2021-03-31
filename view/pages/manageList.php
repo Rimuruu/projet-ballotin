@@ -1,10 +1,10 @@
 <?php
 include '../../controller/vote.php';
 session_start();
-if(!(isset( $_SESSION["mail"])&&isset( $_SESSION["mdp"]))){
+if (!(isset($_SESSION["mail"]) && isset($_SESSION["mdp"]))) {
   header("Location: ../../index.php");
 }
-$votes = getVote($_SESSION["mail"]);
+$votes = getVotes($_SESSION["mail"]);
 
 
 ?>
@@ -42,17 +42,32 @@ $votes = getVote($_SESSION["mail"]);
 <body>
   <div class="body">
     <div class="container-login">
-    <div><?php echo "Connecté : " . $_SESSION["mail"] ?> <a href="./home.php">Home</a><a href="./disconnect.php">Se deconnecter</a></div>
-        <?php ;
-        
-        foreach($votes as $vote ){
-          echo $vote["question"]."   ".$vote["date"]["mday"]."/".$vote["date"]["mon"]."<br/>";
+      <div><?php echo "Connecté : " . $_SESSION["mail"]; ?> <a href="./home.php">Home</a><a href="./disconnect.php">Se deconnecter</a></div>
+      <table>
+        <thead>
+          <tr>
+            <th>Question</th>
+            <th>Date</th>
+           
 
-        }
-        
-        
-        
-        ?>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+
+          foreach ($votes as $vote) {
+            echo "<tr>";
+            echo "<td><label>".$vote["question"] . "</label></td>  <td><label> " . $vote["date"]["mday"] . "/" . $vote["date"]["mon"]."</label></td>";
+            echo "<td><form  action='./manage.php' method='POST'><button name='id' value='".$vote["id"]."' type='submit'>Manage</button></form></td>";
+            echo "</tr>";
+          }
+
+
+
+          ?>
+
+        </tbody>
+      </table>
     </div>
 
 
