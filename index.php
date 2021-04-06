@@ -3,15 +3,15 @@ require "./controller/account.php";
 $result = "";
 session_start();
 
-if(isset($_POST["mail"])&&isset($_POST["mdp"])){
-  $result = login($_post["mail"],$_post["mdp"]);
+if (isset($_POST["mail"]) && isset($_POST["mdp"])) {
+  $result = login($_post["mail"], $_post["mdp"]);
   echo $result;
-  if($result == TRUE){
+  if ($result == TRUE) {
     $_SESSION["mail"] = $_POST["mail"];
     $_SESSION["mdp"] = $_POST["mdp"];
   }
 }
-if(isset( $_SESSION["mail"])&&isset( $_SESSION["mdp"])){
+if (isset($_SESSION["mail"]) && isset($_SESSION["mdp"])) {
   header("Location: view/pages/home.php");
 }
 
@@ -29,37 +29,35 @@ if(isset( $_SESSION["mail"])&&isset( $_SESSION["mdp"])){
   <title>Projet Ballotin</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .ligne {
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    label {
-      display: block;
-      width: 250px;
-    }
-
-    button {
-      height: 50px;
-    }
-
-    .erreur {
-      color: red;
-    }
-  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-  <div class="body">
-    <div class="container-login">
-    <form method="POST" action="index.php">
-      <div class="ligne"><label>Email</label> <input id="mail" name="mail" type="text" /></div>
-      <div class="ligne"><label>mot de passe</label> <input  id="mdp" name="mdp"  type="password" /><button type="button" onclick="send()">Envoie mot de passe</button></div>
-      <div class="erreur"></div>
-      <input type="submit" value="Se connecter"/>
-      </form>
+  <div class="h-100 container-fluid bg-dark">
+    <div class="container bg-light">
+      <div class=" container">
+        <form method="POST" action="index.php">
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="mail" name=mail aria-describedby="emailHelp" placeholder="Enter email">
+
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <div class="row">
+              <input type="password" class="form-control col" id="mdp" name=mdp placeholder="Password">
+              <button type="button" class="col" onclick="send()">Envoie mot de passe</button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="erreur"></div>
+        </form>
+      </div>
     </div>
 
 
@@ -100,15 +98,14 @@ if(isset( $_SESSION["mail"])&&isset( $_SESSION["mdp"])){
 
   }
 
-  function login(){
+  function login() {
     let mail = $("#mail")[0].value;
     let mdp = $("#mdp")[0].value
     if (!mail) {
       erreur.innerText = "Pas de mail indiquer";
     } else if (!regexmail.test(mail)) {
       erreur.innerText = "Ce n'est pas un mail";
-    }
-    else if (!mdp){
+    } else if (!mdp) {
       erreur.innerText = "Pas de mot de pass indiquer"
     }
 

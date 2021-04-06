@@ -142,6 +142,46 @@ function deleteVote($id){
 
 }
 
+function setVote($id,$mail,$reponse){
+    if (file_exists(dirname(__FILE__)."/../model/vote.json")) {
+        $contents = file_get_contents(dirname(__FILE__)."/../model/vote.json");
+        $info = json_decode($contents, true);
+
+
+
+        $result = array_search(
+            $id
+            ,array_column($info["data"],'id')
+        );
+        if($result === false) return "Erreur le vote n'existe pas";
+        if($info["data"][$result]["status"]=="close") return "Erreur le vote est fermé";
+        $result2 = array_search(
+            $mail
+            ,array_column($info["data"][$result]["votants"],'votant')
+        );
+        if($result2 === false) return "Erreur vous étes pas un votant";
+        $result3 = array_search(
+            $reponse
+            ,array_column($info["data"][$result]["reponses"],'reponse')
+        );
+        if($result3 === false) return "Erreur réponse existe pas : ".$reponse;
+        if($info["data"][$result]["votants"][$result2]["votePossibility"] > 0){
+            array_push($info["data"][$result]["reponses"][$result3]["votant"],$mail);
+            $info["data"][$result]["votants"][$result2]["votePossibility"] -= 1;
+        }
+        else {
+            return FALSE;
+        }
+        $modif = json_encode($info);
+        $file = fopen(dirname(__FILE__)."/../model/vote.json", "w");
+        fwrite($file, $modif);
+
+        return TRUE;
+
+
+    }
+}
+
 
 
 ?>

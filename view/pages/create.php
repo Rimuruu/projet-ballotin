@@ -14,75 +14,70 @@ if (!(isset($_SESSION["mail"]) && isset($_SESSION["mdp"]))) {
   <title>Projet Ballotin</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
   <link rel="stylesheet" href="../../css/styles.css">
-  <style>
-    .ligne {
-      display: block;
-      margin-bottom: 10px;
-    }
 
-    label {
-      display: block;
-      width: 250px;
-    }
-
-    button {
-      height: 50px;
-    }
-
-    .erreur {
-      color: red;
-    }
-
-    .votant {
-
-      align-items: center;
-      display: grid;
-      grid-template-areas: ". . . . .";
-      margin: 10px;
-    }
-
-    .votediv>* {
-      align-items: center;
-      display: block;
-    }
-
-
-    .container-forms {
-      display: grid;
-      grid-template-areas: "."".";
-      padding: 50px;
-      background-color: 6D676E;
-      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    }
-  </style>
 </head>
 
 <body>
-  <div class="body">
-    <div class="container-forms">
-      <div><?php echo "Connecté : " . $_SESSION["mail"] ?> <a href="./home.php">Home</a><a href="./disconnect.php">Se deconnecter</a></div>
-      <div class="ligne"><label>Question</label> <input id="question" type="text" /></div>
+<div class="h-100 container-fluid bg-dark">
+    <div class="container bg-light">
+    <nav class="navbar  navbar-light bg-light">
+        <a class="navbar-brand" href="#"><?php echo $_SESSION["mail"] ?> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./home.php">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./voteList.php">Voter</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./manageList.php">Gérer un vote</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./create.php">Créer un vote</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./disconnect.php">Se deconnecter</a>
+            </li>
+
+            
+        </div>
+      </nav>
+      <div class="container m-2">
+      <div class="ligne row m-2"><label class="col-sm-3 form-label">Question</label> <input class="col form-control" id="question" type="text" /></div>
       <div class="responses">
-        <div class="response"><label> Response 1</label> <input id="reponse1" type="text" /></div>
+        <div class="response row m-2"><label class="col-sm-3 form-label"> Response 1</label> <input class="col form-control" id="reponse1" type="text" /></div>
       </div>
-      <button onclick="appendResponse()">Ajouter une réponse</button>
-      <button onclick="removeResponse()">Enlever une réponse</button>
+      <div class="container m-2 row">
+      <button class="btn btn-secondary col m-2"  onclick="appendResponse()">Ajouter une réponse</button>
+      <button class="btn btn-secondary col m-2"  onclick="removeResponse()">Enlever une réponse</button>
+      </div>
 
-
-      <div class="votants">
-        <div class="votant"><label>Votants 1</label> <input required name="mail" type="text" />
-          <div class="votediv"><label>Vote</label><input checked class="voteBox" type="checkbox"></div>
-          <div class="votediv"><label>Procuration 1</label><input class="voteBox" type="checkbox"></div>
-          <div class="votediv"><label>Procuration 2</label><input class="voteBox" type="checkbox"></div>
+      <div class="votants container">
+        <div class="votant m-2 row align-items-start justify-content-evenly"><div class="col row my-auto"><label class="form-label col-sm-3 my-auto" >Votants 1</label> <input class="form-control col"  name="mail" type="text" /></div>
+          <div class="votediv m-2 col-sm-2 "><label class="form-label d-block text-center">Vote</label><input checked class="voteBox d-block mx-auto" type="checkbox"></div>
+          <div class="votediv m-2 col-sm-2 "><label class="form-label d-block text-center">Procuration 1</label><input class="voteBox d-block mx-auto" type="checkbox"></div>
+          <div class="votediv m-2 col-sm-2"><label class="form-label d-block text-center">Procuration 2</label><input class="voteBox d-block mx-auto" type="checkbox"></div>
         </div>
 
       </div>
-      <button onclick="appendVotant()">Ajouter un votant</button>
-      <button onclick="removeVotant()">Enlever un votant</button>
-      <button id="sendButton" onclick="send()">Créer</button>
+      <div class="container m-2 row">
+      <button class="btn btn-secondary col m-2" onclick="appendVotant()">Ajouter un votant</button>
+      <button class="btn btn-secondary col m-2"  onclick="removeVotant()">Enlever un votant</button>
+      </div>
+      <div class="container-fluid m-2 text-center">
+      <button id="sendButton" class="mx-auto btn btn-primary" onclick="send()">Créer</button>
+      </div>
       <label id="error"></label>
-
+      <div>
 
 
     </div>
@@ -111,8 +106,8 @@ if (!(isset($_SESSION["mail"]) && isset($_SESSION["mdp"]))) {
 
   function appendVotant() {
     let clone = $('.votant:first').clone();
-    let kidLabel = clone.children("label")[0];
-    let kidInput = clone.children("input")[0];
+    let kidLabel = clone.children(".col:first").children("label")[0];
+    let kidInput = clone.children(".col:first").children("input")[0];
     kidLabel.innerHTML = "Votant " + ($(".votants:first").children().length + 1);
     kidInput.value = "";
     kidInput.classList.add("votantInput");
@@ -126,7 +121,7 @@ if (!(isset($_SESSION["mail"]) && isset($_SESSION["mdp"]))) {
   function mappingVotant(x) {
     let jObj = $(x);
     console.log(jObj);
-    let nom = jObj.children("input:first")[0].value;
+    let nom = jObj.children(".col:first").children("input:first")[0].value;
     let vote = jObj.children(".votediv:first").children("input:first")[0].checked;
     let proc1 = jObj.children(".votediv:nth-of-type(2)").children("input:first")[0].checked;
     let proc2 = jObj.children(".votediv:nth-of-type(3)").children("input:first")[0].checked;
