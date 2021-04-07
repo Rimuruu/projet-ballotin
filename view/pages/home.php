@@ -48,18 +48,20 @@ if (!(isset($_SESSION["mail"]) && isset($_SESSION["mdp"]))) {
               <a class="nav-link" href="./disconnect.php">Se deconnecter</a>
             </li>
 
-            
+
         </div>
       </nav>
-        <div class="jumbotron m-2 bg-grey">
-          <h1 class="display-4">Projet Web 2020-21</h1>
-          <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-          <hr class="my-4">
-          <p >It uses utility classes for typography and spacing to space content out within the larger container.</p>
-          <p class="lead m-2">
+      <div class="jumbotron p-2 bg-grey">
+        <h1 class="display-4">Projet Web 2020-21</h1>
+        <p class="lead">
+            <a href="https://github.com/Rimuruu/projet-ballotin">https://github.com/Rimuruu/projet-ballotin</a>
+        </p>
+        <hr class="my-4">
+        <p>Antoine Renciot.</p>
+        <p class="lead p-1">
 
-          </p>
-        </div>
+        </p>
+      </div>
 
 
 

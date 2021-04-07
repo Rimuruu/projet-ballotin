@@ -53,31 +53,31 @@ $votes = getVotes($_SESSION["mail"]);
             
         </div>
       </nav>
-      <table>
-        <thead>
-          <tr>
-            <th>Question</th>
-            <th>Date</th>
+      <div class="container p-3">
+        <div class="row">
+
+            <div class="col"><h3>Question</h3></div>
+            <div class="col"><h3>Date</h3></div>
+            <div class="col"><h3>Gérer</h3></div>
            
 
-          </tr>
-        </thead>
-        <tbody>
+        </div>
+
           <?php
 
           foreach ($votes as $vote) {
-            echo "<tr>";
-            echo "<td><label>".$vote["question"] . "</label></td>  <td><label> " . $vote["date"]["mday"] . "/" . $vote["date"]["mon"]."</label></td>";
-            echo "<td><form  action='./manage.php' method='POST'><button name='id' value='".$vote["id"]."' type='submit'>Manage</button></form></td>";
-            echo "</tr>";
+            echo "<div class='row p-3'>";
+            echo "<div class='col d-block'><label class='form-label col'>".$vote["question"] . "</label></div>  <div class='col'><label> " . $vote["date"]["mday"] . "/" . $vote["date"]["mon"]."</label></div>";
+            echo "<div class='col'><form   action='./manage.php' method='POST'><button name='id' class='btn btn-secondary' value='".$vote["id"]."' type='submit'>Manage</button></form></div>";
+            echo "</div>";
           }
 
 
 
           ?>
 
-        </tbody>
-      </table>
+
+      </div>
     </div>
 
 

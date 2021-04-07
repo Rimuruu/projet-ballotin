@@ -4,11 +4,14 @@ $result = "";
 session_start();
 
 if (isset($_POST["mail"]) && isset($_POST["mdp"])) {
-  $result = login($_post["mail"], $_post["mdp"]);
-  echo $result;
+  $result = login($_POST["mail"], $_POST["mdp"]);
   if ($result == TRUE) {
     $_SESSION["mail"] = $_POST["mail"];
     $_SESSION["mdp"] = $_POST["mdp"];
+  }
+  else{ 
+    $erreur = "Mauvais login/password";
+
   }
 }
 if (isset($_SESSION["mail"]) && isset($_SESSION["mdp"])) {
@@ -43,19 +46,21 @@ if (isset($_SESSION["mail"]) && isset($_SESSION["mdp"])) {
 
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="mail" name=mail aria-describedby="emailHelp" placeholder="Enter email">
-
+            <div class="row"><input type="email" class="form-control col" id="mail" name=mail aria-describedby="emailHelp" placeholder="Enter email">
+            <div class="col-sm-2"></div>
+            </div>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
             <div class="row">
               <input type="password" class="form-control col" id="mdp" name=mdp placeholder="Password">
-              <button type="button" class="col" onclick="send()">Envoie mot de passe</button>
+              <button type="button" class="col-sm-2 btn btn-secondary" onclick="send()">Envoie mot de passe</button>
             </div>
           </div>
-
-          <button type="submit" class="btn btn-primary">Submit</button>
-          <div class="erreur"></div>
+          <div class="container text-center">
+          <button type="submit" class="btn btn-primary m-2 row">Submit</button>
+          <div class="erreur row text-danger"><?php if(isset($erreur)) echo $erreur;?></div>
+          </div>
         </form>
       </div>
     </div>

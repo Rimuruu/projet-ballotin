@@ -101,7 +101,10 @@ if ($isVotant === false) header("Location: ../../index.php");
                     if($vote["votants"][$isVotant]["votePossibility"]>0) echo "<button class='btn btn-primary' type='submit'>Voter</button>";
                     else echo "<label>Vous avez déjà voté</label>";
                 }
-                      else  echo "<label>Le vote est fermé</label>";
+                      else { echo "<label>Le vote est fermé</label>";
+                        echo '<div class="border rounded" id="chartContainer" style="height: 370px; width: 100%;"></div>';
+
+                      }
                 
                 ?>
             </form>
@@ -113,7 +116,42 @@ if ($isVotant === false) header("Location: ../../index.php");
 
 
 </body>
+<script src="./canvasJS/canvasjs.min.js"></script>
 <script>
+  var vote = <?php echo json_encode($vote) ?>;
+  var CanvasJS = CanvasJS;
+  var data = vote.reponses.map(x => {
+    let obj = {
+      'y': x.votant.length,
+      'label': x.reponse
+    }
+    return obj
+  });
+  var nonvotant = {'y': vote.votants.length - data.reduce((acc,obj)=> acc+obj.y,0),'label':'Non votant'};
+  data.push(nonvotant);
+  window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	theme: "light2", // "light1", "light2", "dark1", "dark2"
+	exportEnabled: false,
+	animationEnabled: true,
+	title: {
+		text: vote.question
+	},
+	data: [{
+		type: "pie",
+		startAngle: 25,
+		toolTipContent: "<b>{label}</b>: {y}",
+		showInLegend: "true",
+		legendText: "{label}",
+		indexLabelFontSize: 16,
+		indexLabel: "{label} - {y}",
+		dataPoints: data
+	}]
+});
+chart.render();
+
+}
 
 </script>
 

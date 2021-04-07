@@ -54,7 +54,7 @@ if ($vote['owner'] != $_SESSION["mail"]) header("Location: ../../index.php");
 
         </div>
       </nav>
-      <div class="container m-4">
+      <div class="container p-4">
         <div class='row'>
           <div class='col'><label class="fw-bold">Réponses</label></div>
           <div class='col'><label class="fw-bold">Votants</label></div>
@@ -77,12 +77,18 @@ if ($vote['owner'] != $_SESSION["mail"]) header("Location: ../../index.php");
 
         ?>
 
-          <?php if ($vote["status"] == "going") echo "<form  class='container-fluid text-center m-4' action='./closeVote.php' method='POST'><button class='btn btn-danger m-2' name='id' value='" . $vote["id"] . "' type='submit'>Fermer le vote</button></form>";
-          if ($vote["status"] == "close") echo "<form class='container-fluid text-center m-4' action='./deleteVote.php' method='POST'><button class='btn btn-danger m-2'  name='id' value='" . $vote["id"] . "' type='submit'>Supprimer le vote</button></form>";
-          ?>
-
+        <?php if ($vote["status"] == "going") echo "<form  class='container-fluid text-center m-4' action='./closeVote.php' method='POST'><button class='btn btn-danger m-2' name='id' value='" . $vote["id"] . "' type='submit'>Fermer le vote</button></form>";
+        if ($vote["status"] == "close") 
+        {
+          echo '<div class="border rounded" id="chartContainer" style="height: 370px; width: 100%;"></div>';
+          echo "<form class='container-fluid text-center m-4' action='./deleteVote.php' method='POST'><button class='btn btn-danger m-2'  name='id' value='" . $vote["id"] . "' type='submit'>Supprimer le vote</button></form>";
+        }
+        
+        ?>
+      
       </div>
     </div>
+    
 
 
 
@@ -90,7 +96,42 @@ if ($vote['owner'] != $_SESSION["mail"]) header("Location: ../../index.php");
 
 
 </body>
+<script src="./canvasJS/canvasjs.min.js"></script>
 <script>
+  var vote = <?php echo json_encode($vote) ?>;
+  var CanvasJS = CanvasJS;
+  var data = vote.reponses.map(x => {
+    let obj = {
+      'y': (x.votant.length*100)/vote.votants.length,
+      'label': x.reponse
+    }
+    return obj
+  });
+  var nonvotant = {'y': ((vote.votants.length - vote.reponses.reduce((acc,obj)=> acc+obj.votant.length,0))*100)/vote.votants.length,'label':'Non votant'};
+  data.push(nonvotant);
+  window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	theme: "light2", 
+	exportEnabled: false,
+	animationEnabled: true,
+	title: {
+		text: vote.question
+	},
+	data: [{
+		type: "pie",
+		startAngle: 25,
+		toolTipContent: "<b>{label}</b>: {y}%",
+		showInLegend: "true",
+		legendText: "{label}",
+		indexLabelFontSize: 16,
+		indexLabel: "{label} - {y}%",
+		dataPoints: data
+	}]
+});
+chart.render();
+
+}
 
 </script>
 

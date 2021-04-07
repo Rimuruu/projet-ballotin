@@ -52,16 +52,15 @@ function console_log( $data ){
   }
 
 function createAccount($mail){
-    if (file_exists("../model/account.json")) {
+    if (file_exists(dirname(__FILE__)."/../model/account.json")) {
         
-        $contents = file_get_contents("../model/account.json");
+        $contents = file_get_contents(dirname(__FILE__)."/../model/account.json");
         $info = json_decode($contents, true);
-        //console_log($contents);
         $password = generateStrongPassword();
         $account = ["mail"=>$mail,"password"=>$password];
         array_push($info,$account);
         $modif = json_encode($info);
-        $file = fopen("../model/account.json", "w");
+        $file = fopen(dirname(__FILE__)."/../model/account.json", "w");
         fwrite($file, $modif);
     return $account;    
     }
@@ -71,27 +70,28 @@ function createAccount($mail){
 
 function accountExist($mail){
 	$item = FALSE;
-	if (file_exists("../model/account.json")) {
+	if (file_exists(dirname(__FILE__)."/../model/account.json")) {
         
-        $contents = file_get_contents("../model/account.json");
+        $contents = file_get_contents(dirname(__FILE__)."/../model/account.json");
         $info = json_decode($contents, true);
         foreach($info as $struct) {
+			
 			if ($mail == $struct["mail"]) {
 				$item = $struct;
 				break;
 			}
 		}
     }
-	//console_log($item);
+	
 	return $item;
 
 }
 
 function login($mail,$mdp){
     if(($account = accountExist($mail))==FALSE){
-        return "Le compte n'existe pas";
-    }else if($account["password"]==$mdp){
-        return "Mauvais mot de passe";
+		return FALSE;
+    }else if($account["password"]!=$mdp){
+        return FALSE;
     }
     else{
         return TRUE;
