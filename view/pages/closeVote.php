@@ -1,22 +1,18 @@
 <?php
-include '../../controller/vote.php';
+include dirname(__FILE__).'/../../controller/vote.php';
+ob_start();
 session_start();
 
 if (!(isset($_SESSION["mail"]) && isset($_SESSION["mdp"]))) {
-    header("Location: ../../index.php");
+    echo "403 FORBIDDEN";
   }
+else{
 $vote = getVote($_POST['id']);
-if($vote['owner'] != $_SESSION["mail"]) header("Location: ../../index.php");
+if($vote['owner'] != $_SESSION["mail"]) echo "403 FORBIDDEN";
+else{
 closeVote($_POST['id']);
+ob_end_clean();
+echo json_encode($_POST['id']);
+}
+}
 ?>
-
-<form id="myForm" action="./manage.php" method="post">
-<?php
-    foreach ($_POST as $a => $b) {
-        echo '<input type="hidden" name="'.htmlentities($a).'" value="'.htmlentities($b).'">';
-    }
-?>
-</form>
-<script type="text/javascript">
-    document.getElementById('myForm').submit();
-</script>
