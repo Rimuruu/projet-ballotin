@@ -22,7 +22,20 @@ if ($isVotant === false){
 
 }
 else {
+    $Allvotant = 0;
+    $Abstention = 0;
+    foreach($vote["votants"]as$votant){
+        $Allvotant += intval($votant["votePossibility"]);
+        $Abstention += intval($votant["votePossibility"]);
+    }
+    foreach($vote["reponses"]as$reponse){
+        $Allvotant += count($reponse["votant"]);
+
+    }
     if($vote["status"]=="going" && $vote["votants"][$isVotant]["votePossibility"]>0){
+    $Allvotant = 0;
+    $Abstention = 0;
+    
     $str .=   "<h2> Vous avez " . $vote["votants"][$isVotant]["votePossibility"] ." ".($vote["votants"][$isVotant]["votePossibility"]>1?"votes":"  vote")." </h2>";
 
     $str .= '<input type="hidden" name="id" value="'.$_GET['vote'].'">'; 
@@ -62,7 +75,7 @@ else {
        
                if($vote["status"] =="going") {
                     if($vote["votants"][$isVotant]["votePossibility"]>0) $str .= "<button onClick='return voteSend(".$_GET['vote'].")' class='btn btn-primary' >Voter</button>";
-                    else $str .= "<p>Vous avez déjà voté. Les résultats seront affichés lorsque le vote sera clos.</p>";
+                    else $str .= "<p>Vous avez déjà voté. Le taux de participation est de ".(100-($Abstention*100/$Allvotant))."% Les résultats seront affichés lorsque le vote sera clos.</p>";
                 }
                       else { $str .= "<label>Le vote est terminé</label>";
                         $str .= '<div class="border rounded" id="chartContainer" style="height: 370px; width: 100%;"></div>';

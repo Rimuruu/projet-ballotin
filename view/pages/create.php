@@ -22,7 +22,7 @@ echo '<div class="container m-2">
 
 
     <div class ="container row">
-    <div class="col text-center"><button type="button" class="btn col btn-secondary">Créer une liste</button></div>
+    <div class="col text-center"><button type="button" onclick="downloadList()" class="btn col btn-secondary">Créer une liste</button></div>
     <div class="col text-center">
           <input style="display: none;" type="file"
           id="liste" name="liste"

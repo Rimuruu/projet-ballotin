@@ -1,0 +1,525 @@
+[{
+    "firstname": "Guillaume",
+    "lastname": "Abadie",
+    "email": "guillaume.abadie@universite-paris-saclay.fr"
+},{
+    "firstname": "Mohammad",
+    "lastname": "Akhlaghi",
+    "email": "mohammad.akhlaghi@universite-paris-saclay.fr"
+},{
+    "firstname": "Antoine",
+    "lastname": "Barbannaud",
+    "email": "antoine.barbannaud@universite-paris-saclay.fr"
+},{
+    "firstname": "Alicia",
+    "lastname": "Bec",
+    "email": "alicia.bec@universite-paris-saclay.fr"
+},{
+    "firstname": "Fedy",
+    "lastname": "Ben Naceur",
+    "email": "fedy.ben-naceur@universite-paris-saclay.fr"
+},{
+    "firstname": "Mathieu",
+    "lastname": "Benard",
+    "email": "mathieu.benard@universite-paris-saclay.fr"
+},{
+    "firstname": "Martin",
+    "lastname": "Berthier",
+    "email": "martin.berthier@universite-paris-saclay.fr"
+},{
+    "firstname": "Quentin",
+    "lastname": "Bertrand",
+    "email": "quentin.bertrand@universite-paris-saclay.fr"
+},{
+    "firstname": "Nabila",
+    "lastname": "Bouamara",
+    "email": "nabila.bouamara@universite-paris-saclay.fr"
+},{
+    "firstname": "Circe",
+    "lastname": "Carletti",
+    "email": "circe.carletti@universite-paris-saclay.fr"
+},{
+    "firstname": "Laetitia",
+    "lastname": "Clerc",
+    "email": "laetitia.clerc@universite-paris-saclay.fr"
+},{
+    "firstname": "Arthur",
+    "lastname": "Clot",
+    "email": "arthur.clot@universite-paris-saclay.fr"
+},{
+    "firstname": "Albanio",
+    "lastname": "De Souza",
+    "email": "albanio.de-souza@universite-paris-saclay.fr"
+},{
+    "firstname": "Carlo Elia",
+    "lastname": "Doncecchi",
+    "email": "carlo-elia.doncecchi@universite-paris-saclay.fr"
+},{
+    "firstname": "Jean-Francois",
+    "lastname": "Gassie",
+    "email": "jean-francois.gassie@universite-paris-saclay.fr"
+},{
+    "firstname": "Feriel",
+    "lastname": "Iskounen",
+    "email": "feriel.iskounen@universite-paris-saclay.fr"
+},{
+    "firstname": "Lilia",
+    "lastname": "Izri",
+    "email": "lilia.izri@universite-paris-saclay.fr"
+},{
+    "firstname": "Hakim",
+    "lastname": "Kasdi",
+    "email": "hakim.kasdi@universite-paris-saclay.fr"
+},{
+    "firstname": "Haithem",
+    "lastname": "Khaldi",
+    "email": "haithem.khaldi@universite-paris-saclay.fr"
+},{
+    "firstname": "Nelly",
+    "lastname": "Lam",
+    "email": "nelly.lam@universite-paris-saclay.fr"
+},{
+    "firstname": "Mathilde",
+    "lastname": "Lasseigne",
+    "email": "mathilde.lasseigne@universite-paris-saclay.fr"
+},{
+    "firstname": "Victor",
+    "lastname": "Lemaire",
+    "email": "victor.lemaire@universite-paris-saclay.fr"
+},{
+    "firstname": "Yongjie",
+    "lastname": "Liu",
+    "email": "yongjie.liu@universite-paris-saclay.fr"
+},{
+    "firstname": "Hamza",
+    "lastname": "Manita Jelidi",
+    "email": "hamza.manita-jelidi@universite-paris-saclay.fr"
+},{
+    "firstname": "Baptiste",
+    "lastname": "Maquet",
+    "email": "baptiste.maquet@universite-paris-saclay.fr"
+},{
+    "firstname": "Taissir",
+    "lastname": "Marce",
+    "email": "taissir.marce@universite-paris-saclay.fr"
+},{
+    "firstname": "Jeyanthan",
+    "lastname": "Markandu",
+    "email": "jeyanthan.markandu@universite-paris-saclay.fr"
+},{
+    "firstname": "Ouassim",
+    "lastname": "Meftah",
+    "email": "ouassim.meftah@universite-paris-saclay.fr"
+},{
+    "firstname": "Jugurtha",
+    "lastname": "Melahi",
+    "email": "jugurtha.melahi@universite-paris-saclay.fr"
+},{
+    "firstname": "Nathan",
+    "lastname": "Monsoro",
+    "email": "nathan.monsoro@universite-paris-saclay.fr"
+},{
+    "firstname": "Antoine",
+    "lastname": "Mouchoux",
+    "email": "antoine.mouchoux@universite-paris-saclay.fr"
+},{
+    "firstname": "Ndieme",
+    "lastname": "Ndao",
+    "email": "ndieme.ndao@universite-paris-saclay.fr"
+},{
+    "firstname": "Ugo",
+    "lastname": "Nzongani",
+    "email": "ugo.nzongani@universite-paris-saclay.fr"
+},{
+    "firstname": "Mohamed",
+    "lastname": "Oumezzaouche",
+    "email": "mohamed.oumezzaouche@universite-paris-saclay.fr"
+},{
+    "firstname": "Hugo",
+    "lastname": "Penicand",
+    "email": "hugo.penicand@universite-paris-saclay.fr"
+},{
+    "firstname": "Samir",
+    "lastname": "Rabiai",
+    "email": "samir.rabiai@universite-paris-saclay.fr"
+},{
+    "firstname": "Fanoa",
+    "lastname": "Razafimbelo",
+    "email": "fanoa.razafimbelo@universite-paris-saclay.fr"
+},{
+    "firstname": "Leo",
+    "lastname": "Ressayre",
+    "email": "leo.ressayre@universite-paris-saclay.fr"
+},{
+    "firstname": "Anis",
+    "lastname": "Smati",
+    "email": "anis.smati@universite-paris-saclay.fr"
+},{
+    "firstname": "Toufic",
+    "lastname": "Talha",
+    "email": "toufic.talha@universite-paris-saclay.fr"
+},{
+    "firstname": "Tom",
+    "lastname": "Theret",
+    "email": "tom.theret@universite-paris-saclay.fr"
+},{
+    "firstname": "Zhenhai",
+    "lastname": "Xu",
+    "email": "zhenhai.xu@universite-paris-saclay.fr"
+},{
+    "firstname": "Katia",
+    "lastname": "Fettat",
+    "email": "katia.fettat@universite-paris-saclay.fr"
+},{
+    "firstname": "Celine",
+    "lastname": "Yan",
+    "email": "celine.yan@universite-paris-saclay.fr"
+},{
+    "firstname": "Simon",
+    "lastname": "Bibitchkov",
+    "email": "simon.bibitchkov@universite-paris-saclay.fr"
+},{
+    "firstname": "Mohamed Amine",
+    "lastname": "Dardouri",
+    "email": "mohamed-amine.dardouri@universite-paris-saclay.fr"
+},{
+    "firstname": "Maxime",
+    "lastname": "Delachaussee",
+    "email": "maxime.delachaussee@universite-paris-saclay.fr"
+},{
+    "firstname": "Clément",
+    "lastname": "Elliker",
+    "email": "clement.elliker@universite-paris-saclay.fr"
+},{
+    "firstname": "Frédéric",
+    "lastname": "Vernier",
+    "email": "frederic.vernier@universite-paris-saclay.fr"
+},{
+    "firstname": "Miguel",
+    "lastname": "Renom-Roldan",
+    "email": "Miguel.Renom-Roldan@universite-paris-saclay.fr"
+},{
+    "firstname": "Luqman",
+    "lastname": "Dahalani",
+    "email": "luqman.dahalani@universite-paris-saclay.fr"
+},{
+    "firstname": "Aimane",
+    "lastname": "Benammar",
+    "email": "aimane.benammar@universite-paris-saclay.fr"
+},{
+    "firstname": "Maxime",
+    "lastname": "Vincent",
+    "email": "maxime.vincent1@universite-paris-saclay.fr"
+},{
+    "firstname": "Charlotte",
+    "lastname": "Trupin",
+    "email": "charlotte.trupin@universite-paris-saclay.fr"
+},{
+    "firstname": "Riyad",
+    "lastname": "Medjadi",
+    "email": "riyad.medjadi@universite-paris-saclay.fr"
+},{
+    "firstname": "Zakaria",
+    "lastname": "Farssi",
+    "email": "zakaria.farssi@universite-paris-saclay.fr"
+},{
+    "firstname": "Rodrigo",
+    "lastname": "De Moraes Pimenta",
+    "email": "rodrigo.de-moraes-pimenta@universite-paris-saclay.fr"
+},{
+    "firstname": "Mohamed Adlene",
+    "lastname": "Slimani",
+    "email": "mohamed-adlene.slimani@universite-paris-saclay.fr"
+},{
+    "firstname": "Mazen",
+    "lastname": "Tebib",
+    "email": "mazen.tebib@universite-paris-saclay.fr"
+},{
+    "firstname": "Gwenn",
+    "lastname": "Renouard",
+    "email": "gwenn.renouard@universite-paris-saclay.fr"
+},{
+    "firstname": "Mohamed",
+    "lastname": "Boukadoum",
+    "email": "mohamed.boukadoum@universite-paris-saclay.fr"
+},{
+    "firstname": "Adam",
+    "lastname": "Bouchaffra",
+    "email": "adam.bouchaffra@universite-paris-saclay.fr"
+},{
+    "firstname": "Hilmi",
+    "lastname": "Celayir",
+    "email": "hilmi.celayir@universite-paris-saclay.fr"
+},{
+    "firstname": "François",
+    "lastname": "Balducchi",
+    "email": "francois.balducchi@universite-paris-saclay.fr"
+},{
+    "firstname": "Andrianiaina",
+    "lastname": "Ranaivoharisoa",
+    "email": "andrianiaina.ranaivoharisoa@universite-paris-saclay.fr"
+},{
+    "firstname": "Benjamin",
+    "lastname": "Estevan",
+    "email": "benjamin.estevan@universite-paris-saclay.fr"
+},{
+    "firstname": "Clement",
+    "lastname": "Pham Van",
+    "email": "clement.pham-van@universite-paris-saclay.fr"
+},{
+    "firstname": "Thiveya",
+    "lastname": "Sellar Markandu",
+    "email": "thiveya.sellar-markandu@universite-paris-saclay.fr"
+},{
+    "firstname": "Ulukbek",
+    "lastname": "Omoev",
+    "email": "ulukbek.omoev@universite-paris-saclay.fr"
+},{
+    "firstname": "Raphael",
+    "lastname": "Gadioux",
+    "email": "raphael.gadioux@universite-paris-saclay.fr"
+},{
+    "firstname": "Yasmine",
+    "lastname": "Ghezali",
+    "email": "yasmine.ghezali@universite-paris-saclay.fr"
+},{
+    "firstname": "Florian",
+    "lastname": "Pontiggia",
+    "email": "florian.pontiggia@universite-paris-saclay.fr"
+},{
+    "firstname": "Thi Thuy Trang",
+    "lastname": "Nguyen",
+    "email": "thi-thuy-trang.nguyen@universite-paris-saclay.fr"
+},{
+    "firstname": "Dealann",
+    "lastname": "Srikumar",
+    "email": "dealann.srikumar@universite-paris-saclay.fr"
+},{
+    "firstname": "Grégor",
+    "lastname": "Badibanga Kalenda",
+    "email": "gregor.badibanga-kalenda@universite-paris-saclay.fr"
+},{
+    "firstname": "Moussa",
+    "lastname": "Niakate",
+    "email": "moussa.niakate@universite-paris-saclay.fr"
+},{
+    "firstname": "Mehdi",
+    "lastname": "Talssi",
+    "email": "mehdi.talssi@universite-paris-saclay.fr"
+},{
+    "firstname": "Rami",
+    "lastname": "Aggoun",
+    "email": "rami.aggoun@universite-paris-saclay.fr"
+},{
+    "firstname": "Julien",
+    "lastname": "Labbe",
+    "email": "julien.labbe@universite-paris-saclay.fr"
+},{
+    "firstname": "Yixuan",
+    "lastname": "Mei",
+    "email": "yixuan.mei@universite-paris-saclay.fr"
+},{
+    "firstname": "Lucas",
+    "lastname": "Marandat",
+    "email": "lucas.marandat@universite-paris-saclay.fr"
+},{
+    "firstname": "Jeremy",
+    "lastname": "Dufourmantelle",
+    "email": "jeremy.dufourmantelle@universite-paris-saclay.fr"
+},{
+    "firstname": "Yassine",
+    "lastname": "Achchab",
+    "email": "yassine.achchab@universite-paris-saclay.fr"
+},{
+    "firstname": "Ruizheng",
+    "lastname": "Xu",
+    "email": "ruizheng.xu@universite-paris-saclay.fr"
+},{
+    "firstname": "Antoine",
+    "lastname": "Kozlov",
+    "email": "antoine.kozlov@universite-paris-saclay.fr"
+},{
+    "firstname": "Alicx",
+    "lastname": "Kamoun",
+    "email": "alicx.kamoun@universite-paris-saclay.fr"
+},{
+    "firstname": "Amine",
+    "lastname": "Lakhel",
+    "email": "amine.lakhel@universite-paris-saclay.fr"
+},{
+    "firstname": "Alexis",
+    "lastname": "Radice",
+    "email": "alexis.radice@universite-paris-saclay.fr"
+},{
+    "firstname": "Jin",
+    "lastname": "Ren",
+    "email": "jin.ren@universite-paris-saclay.fr"
+},{
+    "firstname": "Feriel",
+    "lastname": "Maouchi",
+    "email": "feriel.maouchi@universite-paris-saclay.fr"
+},{
+    "firstname": "Quentin",
+    "lastname": "Sinh",
+    "email": "quentin.sinh@universite-paris-saclay.fr"
+},{
+    "firstname": "Sonia-Taous",
+    "lastname": "Si-Mohammed",
+    "email": "sonia-taous.si-mohammed@universite-paris-saclay.fr"
+},{
+    "firstname": "Letitia",
+    "lastname": "Ait Mouffok",
+    "email": "letitia.ait-mouffok@universite-paris-saclay.fr"
+},{
+    "firstname": "Jeremie",
+    "lastname": "Bourdet",
+    "email": "jeremie.bourdet@universite-paris-saclay.fr"
+},{
+    "firstname": "Loris",
+    "lastname": "Ponroy",
+    "email": "loris.ponroy@u-psud.fr"
+},{
+    "firstname": "Xinan",
+    "lastname": "Shao",
+    "email": "xinan.shao@u-psud.fr"
+},{
+    "firstname": "Adame",
+    "lastname": "Benbouziane",
+    "email": "adame.benbouziane@universite-paris-saclay.fr"
+},{
+    "firstname": "Billal",
+    "lastname": "Icil",
+    "email": "billal.icil@universite-paris-saclay.fr"
+},{
+    "firstname": "Xiaoning",
+    "lastname": "Meng",
+    "email": "xiaoning.meng@universite-paris-saclay.fr"
+},{
+    "firstname": "Yuchuan",
+    "lastname": "Zhou",
+    "email": "yuchuan.zhou@universite-paris-saclay.fr"
+},{
+    "firstname": "Jing",
+    "lastname": "Zhang",
+    "email": "jing.zhang@universite-paris-saclay.fr"
+},{
+    "firstname": "Xuezhi",
+    "lastname": "Wu",
+    "email": "xuezhi.wu@universite-paris-saclay.fr"
+},{
+    "firstname": "Yajie",
+    "lastname": "Liu",
+    "email": "yajie.liu@universite-paris-saclay.fr"
+},{
+    "firstname": "Nicolas",
+    "lastname": "Pernot",
+    "email": "nicolas.pernot@universite-paris-saclay.fr"
+},{
+    "firstname": "Andre",
+    "lastname": "Braga",
+    "email": "andre.braga@universite-paris-saclay.fr"
+},{
+    "firstname": "Tim",
+    "lastname": "Heng",
+    "email": "tim.heng@universite-paris-saclay.fr"
+},{
+    "firstname": "Yiyang",
+    "lastname": "Wu",
+    "email": "yiyang.wu@universite-paris-saclay.fr"
+},{
+    "firstname": "Gabriel",
+    "lastname": "Lauzzana",
+    "email": "gabriel.lauzzana@universite-paris-saclay.fr"
+},{
+    "firstname": "Yuan",
+    "lastname": "Xu",
+    "email": "yuan.xu@universite-paris-saclay.fr"
+},{
+    "firstname": "Liu Yi",
+    "lastname": "Chen",
+    "email": "liu-yi.chen@u-psud.fr"
+},{
+    "firstname": "Shiqing",
+    "lastname": "Huang",
+    "email": "shiqing.huang@u-psud.fr"
+},{
+    "firstname": "Hongyu",
+    "lastname": "Yan",
+    "email": "hongyu.yan@universite-paris-saclay.fr"
+},{
+    "firstname": "Lynda",
+    "lastname": "Sini",
+    "email": "lynda.sini@universite-paris-saclay.fr"
+},{
+    "firstname": "Nicolas",
+    "lastname": "Saint-Leger",
+    "email": "nicolas.saint-leger@universite-paris-saclay.fr"
+},{
+    "firstname": "Sara",
+    "lastname": "Droussi",
+    "email": "sara.droussi@universite-paris-saclay.fr"
+},{
+    "firstname": "Remi",
+    "lastname": "Macquet",
+    "email": "remi.macquet@universite-paris-saclay.fr"
+},{
+    "firstname": "Zinedine",
+    "lastname": "Bedjou",
+    "email": "zinedine.bedjou@universite-paris-saclay.fr"
+},{
+    "firstname": "Alexandre",
+    "lastname": "Combeau",
+    "email": "alexandre.combeau@universite-paris-saclay.fr"
+},{
+    "firstname": "Oscar",
+    "lastname": "Bruneau",
+    "email": "oscar.bruneau@universite-paris-saclay.fr"
+},{
+    "firstname": "Yohann",
+    "lastname": "Allouane",
+    "email": "yohann.allouane@universite-paris-saclay.fr"
+},{
+    "firstname": "Reine",
+    "lastname": "Manounou",
+    "email": "reine.manounou@universite-paris-saclay.fr"
+},{
+    "firstname": "Theo",
+    "lastname": "Bonnard",
+    "email": "theo.bonnard@universite-paris-saclay.fr"
+},{
+    "firstname": "Adam",
+    "lastname": "Soimansoib",
+    "email": "adam.soimansoib@universite-paris-saclay.fr"
+},{
+    "firstname": "Mohamed Ba",
+    "lastname": "Komara",
+    "email": "mohamed-ba.komara@universite-paris-saclay.fr"
+},{
+    "firstname": "David",
+    "lastname": "Dumanoir",
+    "email": "david.dumanoir@universite-paris-saclay.fr"
+},{
+    "firstname": "Maya",
+    "lastname": "Gawinowski",
+    "email": "maya.gawinowski@universite-paris-saclay.fr"
+},{
+    "firstname": "Liuyi",
+    "lastname": "Chen",
+    "email": "liuyi.chen@universite-paris-saclay.fr"
+},{
+    "firstname": "Lingxiao",
+    "lastname": "Xu",
+    "email": "lingxiao.xu@universite-paris-saclay.fr"
+},{
+    "firstname": "Antoine",
+    "lastname": "Renciot",
+    "email": "antoine.renciot@universite-paris-saclay.fr"
+},{
+    "firstname": "Guillaume",
+    "lastname": "Poisson",
+    "email": "guillaume.poisson@universite-paris-saclay.fr"
+},{
+    "firstname": "Clemence",
+    "lastname": "Ragon",
+    "email": "clemence.ragon@universite-paris-saclay.fr"
+}]

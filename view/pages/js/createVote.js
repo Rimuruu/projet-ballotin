@@ -106,6 +106,21 @@ function mappingVotant(x) {
   };
 }
 
+function mappingVotantFile(x) {
+  let jObj = $(x);
+  console.log(jObj);
+  let nom = jObj.children(".col:first").children("input:first")[0].value;
+  let vote = jObj.children(".votediv:first").children("input:first")[0].checked;
+  let proc1 = jObj.children(".votediv:eq( 1 )").children("input:first")[0].checked;
+  let proc2 = jObj.children(".votediv:eq( 2 )").children("input:first")[0].checked;
+  return {
+    votant: nom,
+    vote : vote, 
+    proc1 : proc1,
+    proc2 : proc2
+  };
+}
+
 function mappingResponse(x) {
   let jObj = $(x);
   let reponse = jObj.children("input:first")[0].value;
@@ -183,5 +198,18 @@ function onReaderLoad(event){
   console.log(event.target.result);
   var obj = JSON.parse(event.target.result);
   $('.votants').empty();
-  obj.forEach(element => createVotant(element.email,element.vote,element.proc1,element.proc2));
+  obj.forEach(element => createVotant(element.votant,element.vote,element.proc1,element.proc2));
+}
+
+function downloadList(){
+  let votants = $(".votant").toArray().map(mappingVotantFile);
+  let data = JSON.stringify(votants);
+  let blob = new Blob([data], { type: 'application/json' });
+  let a = document.createElement('a');
+  a.setAttribute('download', "liste.json");
+  a.setAttribute('href', window.URL.createObjectURL(blob));
+  a.click();
+
+
+
 }

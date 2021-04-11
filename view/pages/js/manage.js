@@ -2,7 +2,8 @@
 
 function chart(vote) {
     var allV = 0;
-    var nbNV = vote.votants.reduce((acc, obj) => acc + obj.votePossibility, 0);
+    var nbNV = vote.votants.reduce((acc, obj) => acc + parseInt(obj.votePossibility), 0);
+    console.log(nbNV);
     allV += nbNV;
     allV = vote.reponses.reduce ((acc, obj) => acc + obj.votant.length, allV);
     var data = vote.reponses.map(x => {

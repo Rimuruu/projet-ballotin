@@ -182,6 +182,17 @@ function setVote($id,$mail,$reponse){
     }
 }
 
+function countVotePossibility($votants){
+    $result= 0;
+    foreach($votants as $votant){
+        $result += $votant["votePossibility"];
+
+    }
+    return $result;
+
+}
+
+
 
 
 ?>
