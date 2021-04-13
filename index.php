@@ -131,7 +131,8 @@ function disconnect(){
         url: "./controller/traitement.php",
         dataType: "json",
         data: {
-          "mail": mail
+          "mail": mail,
+          
         }
       }).done(function(e) {
         console.log("success")
@@ -168,7 +169,7 @@ function disconnect(){
         }
       }).done(function(e) {
         console.log("success")
-        if(e == "connecté"){
+        if(e.localeCompare("connecté")==0){
           home();
           navbar();
         }

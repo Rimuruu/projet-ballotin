@@ -10,6 +10,16 @@ html,body{
     
 }
 
+.btn-left-round{
+    border-radius: 0px 10px 10px 0px;
+}
 
+.input-left-round{
+    border-radius: 10px 0px 0px 10px !important;
+}
+
+.input-round{
+    border-radius: 10px 10px 10px 10px;
+}
 
 /* https://coolors.co/faa916-fbfffe-6d676e-1b1b1e-96031a */

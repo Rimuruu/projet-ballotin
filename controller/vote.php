@@ -166,7 +166,7 @@ function setVote($id,$mail,$reponse){
         );
         if($result3 === false) return "Erreur réponse existe pas : ".$reponse;
         if($info["data"][$result]["votants"][$result2]["votePossibility"] > 0){
-            array_push($info["data"][$result]["reponses"][$result3]["votant"],$mail);
+            array_push($info["data"][$result]["reponses"][$result3]["votant"],"vote");
             $info["data"][$result]["votants"][$result2]["votePossibility"] -= 1;
         }
         else {

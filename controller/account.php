@@ -82,10 +82,28 @@ function accountExist($mail){
 			}
 		}
     }
-	
 	return $item;
-
 }
+
+
+function isLog($mail,$mdp){
+	$item = FALSE;
+	if (file_exists(dirname(__FILE__)."/../model/account.json")) {
+        
+        $contents = file_get_contents(dirname(__FILE__)."/../model/account.json");
+        $info = json_decode($contents, true);
+        foreach($info as $struct) {
+			
+			if ($mail == $struct["mail"] && $mdp == $struct["password"]) {
+				$item = TRUE;
+				break;
+			}
+		}
+    }
+	return $item;
+}
+
+
 
 function login($mail,$mdp){
     if(($account = accountExist($mail))==FALSE){

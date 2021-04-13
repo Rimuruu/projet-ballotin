@@ -1,10 +1,10 @@
-<?php 
+<?php
+include  dirname(__FILE__).'/../../controller/account.php';
 session_start();
-if (!(isset($_SESSION["mail"]) && isset($_SESSION["mdp"]))) {
+if (!(isset($_SESSION["mail"]) && isset($_SESSION["mdp"])&& isLog($_SESSION["mail"],$_SESSION["mdp"]))) {
     echo "";
-  }
-else {
-echo '
+} else {
+    echo '
   <nav class="navbar p-2  navbar-light bg-light">
         <a class="navbar-brand" id="owner" href="#">'. $_SESSION["mail"] .' </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,5 +33,3 @@ echo '
         </div>
       </nav>';
 }
-
-      ?>

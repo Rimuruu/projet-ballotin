@@ -1,6 +1,11 @@
 
 <?php
-echo '<div class="container m-2">
+include  dirname(__FILE__).'/../../controller/account.php';
+session_start();
+if (!(isset($_SESSION["mail"]) && isset($_SESSION["mdp"])&& isLog($_SESSION["mail"],$_SESSION["mdp"]))) {
+    echo "403 FORBIDDEN";
+} else {
+    echo '<div class="container m-2">
     <div class="ligne row m-2"><label class="col-sm-3 form-label">Question</label> <input class="col form-control" id="question" type="text" /></div>
     <div class="responses">
       <div class="response row m-2"><label class="col-sm-3 form-label"> Response 1</label> <input class="col form-control" id="reponse1" type="text" /></div>
@@ -55,5 +60,5 @@ echo '<div class="container m-2">
 
 
     </div>';
-
+}
     ?>
