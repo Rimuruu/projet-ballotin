@@ -20,9 +20,15 @@ if (!(isset($_SESSION["mail"]) && isset($_SESSION["mdp"])&& isLog($_SESSION["mai
               ob_end_clean();
               echo json_encode("403 FORBIDDEN");
           } else {
-              $result = setVote($_POST['vote'], $_SESSION["mail"], $_POST["reponse"]);
-              ob_end_clean();
-              echo(json_encode(["result"=>$result,"id"=>$_POST["vote"]]));
+              if ($vote["status"] == "going") {
+                  $result = setVote($_POST['vote'], $_SESSION["mail"], $_POST["reponse"]);
+                  ob_end_clean();
+                  echo(json_encode(["result"=>$result,"id"=>$_POST["vote"]]));
+              }
+              else{
+                ob_end_clean();
+                echo json_encode("403 FORBIDDEN");
+              }
           }
       }
   }
