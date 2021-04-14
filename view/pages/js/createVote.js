@@ -28,7 +28,6 @@ function initCreate() {
     }
 
   }).fail(function (e) {
-    console.log(e);
     $("body").append(e.responseText);
     error = e;
   });
@@ -165,7 +164,6 @@ function sendV() {
 
 function listeChange() {
   let selector = $("#selector")[0];
-  console.log(selector);
   if (selector.value.localeCompare("INFO.json") == 0) {
     $.getJSON("./liste/INFO.json", function (json) {
       $('.votants').empty();
@@ -192,7 +190,6 @@ function openFile(e) {
 }
 
 function onReaderLoad(event) {
-  console.log(event.target.result);
   var obj = JSON.parse(event.target.result);
   $('.votants').empty();
   obj.forEach(element => createVotant(element.votant, element.vote, element.proc1, element.proc2));

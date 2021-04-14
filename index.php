@@ -76,7 +76,6 @@ function loginPage(){
         $(".body")[0].innerHTML = e;
     
       }).fail(function(e) {
-        console.log(e);
         $("body").append(e.responseText);
         error = e;
       }); 
@@ -89,7 +88,6 @@ function navbar(){
         method: "GET",
         url: "./view/pages/navbar.php"
       }).done(function(e) {
-        console.log(e);
         $("#bar")[0].innerHTML = e;
     
       }).fail(function(e) {
@@ -108,8 +106,6 @@ function disconnect(){
         loginPage();
     
       }).fail(function(e) {
-        
-        console.log(e);
         $("body").append(e.responseText);
         error = e;
       });
@@ -135,11 +131,9 @@ function disconnect(){
           
         }
       }).done(function(e) {
-        console.log("success")
         erreur.innerText = 'Mot de passe envoyé';
 
       }).fail(function(e) {
-        console.log(e);
         $("body").append(e.responseText);
         error = e;
       });
@@ -168,13 +162,11 @@ function disconnect(){
           "mdp": mdp
         }
       }).done(function(e) {
-        console.log("success")
         if(e.localeCompare("connecté")==0){
           home();
           navbar();
         }
         else erreur.innerText = e;
-        console.log(e);
 
       }).fail(function(e) {
         console.log("erreur",e);

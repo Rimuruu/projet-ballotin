@@ -25,7 +25,7 @@ if (!(isset($_SESSION["mail"]) && isset($_SESSION["mdp"])&& isLog($_SESSION["mai
         foreach ($vote["reponses"]as$reponse) {
             $Allvotant += count($reponse["votant"]);
         }
-        $str .= '<div class="container p-4"><p>Le taux de participation est de '.(100-($Abstention*100/$Allvotant)).'%</p></div> ';
+        $str .= '<div class="container p-4"><p>Le taux de participation est de '.number_format((100-($Abstention*100/$Allvotant)),2).'%</p></div> ';
         if ($vote["status"] == "close") {
             $str .= '<div class="container p-4">
         <div class="row">

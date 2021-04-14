@@ -1,21 +1,24 @@
 
+const formatter = new Intl.NumberFormat('en-US', {
+  minimumFractionDigits: 2,      
+  maximumFractionDigits: 2,
+});
 
 function chart(vote) {
   var allV = 0;
   var nbNV = vote.votants.reduce((acc, obj) => acc + parseInt(obj.votePossibility), 0);
-  console.log(nbNV);
   allV += nbNV;
   allV = vote.reponses.reduce((acc, obj) => acc + obj.votant.length, allV);
   var data = vote.reponses.map(x => {
 
     let obj = {
-      'y': (x.votant.length * 100) / allV,
+      'y': parseFloat(formatter.format((x.votant.length * 100) / allV)),
       'label': x.reponse,
       'value': x.votant.length
     }
     return obj
   });
-  var nonvotant = { 'y': (nbNV * 100) / allV, 'label': 'Non votant', 'value': nbNV };
+  var nonvotant = { 'y': parseFloat(formatter.format((nbNV * 100) / allV)), 'label': 'Non votant', 'value': nbNV };
   data.push(nonvotant);
 
 
@@ -29,7 +32,7 @@ function chart(vote) {
     data: [{
       type: "pie",
       startAngle: 25,
-      toolTipContent: "Nombre de votes : {value} ",
+      toolTipContent: "{label} Nombre de votes : {value} ",
       showInLegend: "true",
       legendText: "{label}",
       indexLabelFontSize: 16,
@@ -54,7 +57,6 @@ function manageList() {
 
 
   }).fail(function (e) {
-    console.log(e);
     $("body").append(e.responseText);
     error = e;
   });
@@ -70,14 +72,12 @@ function manage(id) {
       "vote": id
     }
   }).done(function (e) {
-    console.log(e);
     $(".body")[0].innerHTML = e.string;
     if (e.data != null && (e.data.status.localeCompare("close") == 0)) chart(e.data);
 
 
 
   }).fail(function (e) {
-    console.log(e);
     $("body").append(e.responseText);
     error = e;
   });
@@ -118,7 +118,7 @@ function closeVote(id) {
 
 
   }).fail(function (e) {
-    console.log(e);
+
     $("body").append(e.responseText);
     error = e;
   });
@@ -135,11 +135,9 @@ function relance(id) {
       "id": id
     }
   }).done(function (e) {
-    console.log(e);
 
 
   }).fail(function (e) {
-    console.log(e);
     $("body").append(e.responseText);
     error = e;
   });

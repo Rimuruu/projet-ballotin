@@ -11,7 +11,6 @@ function voteList() {
 
 
   }).fail(function (e) {
-    console.log(e);
     $("body").append(e.responseText);
     error = e;
   });
@@ -29,14 +28,12 @@ function vote(id) {
       "vote": id
     }
   }).done(function (e) {
-    console.log(e);
     $(".body")[0].innerHTML = e.string;
     if (e.data.status.localeCompare("close") == 0) chart(e.data);
 
 
 
   }).fail(function (e) {
-    console.log(e);
     $("body").append(e.responseText);
     error = e;
   });
@@ -53,14 +50,12 @@ function result(id, result) {
       "result": result
     }
   }).done(function (e) {
-    console.log(e);
     $(".body")[0].innerHTML = e.string;
     if (e.data.status.localeCompare("close") == 0) chart(e.data);
 
 
 
   }).fail(function (e) {
-    console.log(e);
     $("body").append(e.responseText);
     error = e;
   });
@@ -79,14 +74,12 @@ function voteSend(id) {
       "reponse": reponses
     }
   }).done(function (e) {
-    console.log(e);
     result(e.id, e.result)
 
 
 
 
   }).fail(function (e) {
-    console.log(e);
     $("body").append(e.responseText);
     error = e;
   });

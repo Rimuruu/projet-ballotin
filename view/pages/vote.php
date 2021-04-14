@@ -61,7 +61,7 @@ if (!(isset($_SESSION["mail"]) && isset($_SESSION["mdp"])&& isLog($_SESSION["mai
      
         if (isset($_GET["result"])) {
             if ($_GET["result"]) {
-                $str .= "<label>Vote envoyé</label>";
+                $str .= "<label>Vote envoyé</label><br>";
             } else {
                 $str .= "<label>".$_GET["result"]."</label>";
             }
@@ -73,7 +73,7 @@ if (!(isset($_SESSION["mail"]) && isset($_SESSION["mdp"])&& isLog($_SESSION["mai
             if ($vote["votants"][$isVotant]["votePossibility"]>0) {
                 $str .= "<button onClick='return voteSend(".$_GET['vote'].")' class='btn btn-primary' >Voter</button>";
             } else {
-                $str .= "<p>Vous avez déjà voté. Le taux de participation est de ".(100-($Abstention*100/$Allvotant))."% Les résultats seront affichés lorsque le vote sera clos.</p>";
+                $str .= "<p>Vous avez déjà voté. Le taux de participation est de ".number_format((100-($Abstention*100/$Allvotant)),2)."% Les résultats seront affichés lorsque le vote sera clos.</p>";
             }
         } else {
             $str .= "<label>Le vote est terminé</label>";

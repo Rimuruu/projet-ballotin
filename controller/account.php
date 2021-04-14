@@ -105,17 +105,6 @@ function isLog($mail,$mdp){
 
 
 
-function login($mail,$mdp){
-    if(($account = accountExist($mail))==FALSE){
-		return FALSE;
-    }else if($account["password"]!=$mdp){
-        return FALSE;
-    }
-    else{
-        return TRUE;
-    }
-}
-
 
 
 ?>
