@@ -37,7 +37,7 @@ try {
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Mot de passe';
+    $mail->Subject = 'Projet ballotin';
     $mail->Body    = $message;
     $mail->AltBody = $message;
 
