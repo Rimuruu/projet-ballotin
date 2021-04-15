@@ -44,7 +44,7 @@ function generateStrongPassword($length = 9, $add_dashes = false, $available_set
 	return $dash_str;
 }
 
-
+// Pour le debugging
 function console_log( $data ){
     echo '<script>';
     echo 'console.log('. json_encode( $data ) .')';

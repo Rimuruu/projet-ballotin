@@ -1,1 +1,113 @@
-{"cpt":36,"data":[{"id":27,"owner":"antoine.renciot@universite-paris-saclay.fr","question":"Quel Master pr\u00e9f\u00e9rez-vous ?","reponses":[{"reponse":"Master IA","votant":["vote"]},{"reponse":"Master IHM","votant":[]},{"reponse":"Master Miage","votant":["vote"]}],"votants":[{"votant":"antoine.renciot@universite-paris-saclay.fr","votePossibility":0},{"votant":"antoine.renciot@gmail.com","votePossibility":"1"}],"status":"going","date":{"seconds":59,"minutes":49,"hours":11,"mday":12,"wday":1,"mon":4,"year":2021,"yday":101,"weekday":"Monday","month":"April","0":1618228199}},{"id":28,"owner":"antoine.renciot@universite-paris-saclay.fr","question":"Quelles options pour le semestre 6 ?","reponses":[{"reponse":"Web","votant":["vote"]},{"reponse":"Bio Info","votant":[]},{"reponse":"PIIA","votant":["vote"]},{"reponse":"IA","votant":["vote"]},{"reponse":"Info th\u00e9orique","votant":[]}],"votants":[{"votant":"antoine.renciot@universite-paris-saclay.fr","votePossibility":0},{"votant":"antoine.renciot@gmail.com","votePossibility":"3"},{"votant":"ballotin.projet@gmail.com","votePossibility":"3"}],"status":"close","date":{"seconds":40,"minutes":54,"hours":11,"mday":12,"wday":1,"mon":4,"year":2021,"yday":101,"weekday":"Monday","month":"April","0":1618228480}}]}
+{
+    "cpt": 39,
+    "data": [
+        {
+            "id": 27,
+            "owner": "antoine.renciot@universite-paris-saclay.fr",
+            "question": "Quel Master pr\u00e9f\u00e9rez-vous ?",
+            "reponses": [
+                {
+                    "reponse": "Master IA",
+                    "votant": [
+                        "vote"
+                    ]
+                },
+                {
+                    "reponse": "Master IHM",
+                    "votant": []
+                },
+                {
+                    "reponse": "Master Miage",
+                    "votant": [
+                        "vote"
+                    ]
+                }
+            ],
+            "votants": [
+                {
+                    "votant": "antoine.renciot@universite-paris-saclay.fr",
+                    "votePossibility": 0
+                },
+                {
+                    "votant": "antoine.renciot@gmail.com",
+                    "votePossibility": "1"
+                }
+            ],
+            "status": "going",
+            "date": {
+                "seconds": 59,
+                "minutes": 49,
+                "hours": 11,
+                "mday": 12,
+                "wday": 1,
+                "mon": 4,
+                "year": 2021,
+                "yday": 101,
+                "weekday": "Monday",
+                "month": "April",
+                "0": 1618228199
+            }
+        },
+        {
+            "id": 28,
+            "owner": "antoine.renciot@universite-paris-saclay.fr",
+            "question": "Quelles options pour le semestre 6 ?",
+            "reponses": [
+                {
+                    "reponse": "Web",
+                    "votant": [
+                        "vote"
+                    ]
+                },
+                {
+                    "reponse": "Bio Info",
+                    "votant": []
+                },
+                {
+                    "reponse": "PIIA",
+                    "votant": [
+                        "vote"
+                    ]
+                },
+                {
+                    "reponse": "IA",
+                    "votant": [
+                        "vote"
+                    ]
+                },
+                {
+                    "reponse": "Info th\u00e9orique",
+                    "votant": []
+                }
+            ],
+            "votants": [
+                {
+                    "votant": "antoine.renciot@universite-paris-saclay.fr",
+                    "votePossibility": 0
+                },
+                {
+                    "votant": "antoine.renciot@gmail.com",
+                    "votePossibility": "3"
+                },
+                {
+                    "votant": "ballotin.projet@gmail.com",
+                    "votePossibility": "3"
+                }
+            ],
+            "status": "close",
+            "date": {
+                "seconds": 40,
+                "minutes": 54,
+                "hours": 11,
+                "mday": 12,
+                "wday": 1,
+                "mon": 4,
+                "year": 2021,
+                "yday": 101,
+                "weekday": "Monday",
+                "month": "April",
+                "0": 1618228480
+            }
+        }
+    ]
+}
